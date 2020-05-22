@@ -6,35 +6,51 @@
 ### Example query and result:
 
 - files used: words4.pl and word_square4.pl
-- here are the first 5 results
+- here are 3 results (not the first three)
 
 <pre>
 ?- word_square(Words), maplist(portray_clause, Words).
-["a", "c", "i", "d"].
-["c", "a", "r", "e"].
-["i", "r", "o", "n"].
-["d", "e", "n", "y"].
-Words = [["a", "c", "i", "d"], ["c", "a", "r", "e"], ["i", "r", "o", "n"], ["d", "e", "n", "y"]] ;
-["a", "c", "i", "d"].
-["c", "o", "d", "e"].
-["i", "d", "e", "a"].
-["d", "e", "a", "d"].
-Words = [["a", "c", "i", "d"], ["c", "o", "d", "e"], ["i", "d", "e", "a"], ["d", "e", "a", "d"]] ;
-["a", "c", "i", "d"].
-["c", "o", "d", "e"].
-["i", "d", "e", "a"].
-["d", "e", "a", "l"].
-Words = [["a", "c", "i", "d"], ["c", "o", "d", "e"], ["i", "d", "e", "a"], ["d", "e", "a", "l"]] ;
-["a", "c", "i", "d"].
-["c", "o", "d", "e"].
-["i", "d", "e", "a"].
-["d", "e", "a", "n"].
-Words = [["a", "c", "i", "d"], ["c", "o", "d", "e"], ["i", "d", "e", "a"], ["d", "e", "a", "n"]] ;
-["a", "c", "i", "d"].
-["c", "o", "d", "e"].
-["i", "d", "e", "a"].
-["d", "e", "a", "r"].
-Words = [["a", "c", "i", "d"], ["c", "o", "d", "e"], ["i", "d", "e", "a"], ["d", "e", "a", "r"]]
+...
+["s", "a", "m", "e"].
+["o", "r", "a", "l"].
+["l", "e", "s", "s"].
+["e", "a", "s", "e"].
+Words = [["s", "a", "m", "e"], ["o", "r", "a", "l"], ["l", "e", "s", "s"], ["e", "a", "s", "e"]] ;
+["s", "a", "v", "e"].
+["o", "r", "a", "l"].
+["l", "e", "s", "s"].
+["d", "a", "t", "e"].
+Words = [["s", "a", "v", "e"], ["o", "r", "a", "l"], ["l", "e", "s", "s"], ["d", "a", "t", "e"]] ;
+["s", "l", "o", "w"].
+["n", "i", "n", "e"].
+["o", "n", "c", "e"].
+["w", "e", "e", "k"].
+Words = [["s", "l", "o", "w"], ["n", "i", "n", "e"], ["o", "n", "c", "e"], ["w", "e", "e", "k"]]
+</pre>
+
+- get [palindrome](https://en.wikipedia.org/wiki/Palindrome)
+(based on words4-big.pl), first 3 results
+
+<pre>
+?- word([X, Y, Y, X]), maplist(portray_clause, [X, Y, Y, X]).
+"a".
+"b".
+"b".
+"a".
+X = "a",
+Y = "b" ;
+"a".
+"n".
+"n".
+"a".
+X = "a",
+Y = "n" ;
+"b".
+"o".
+"o".
+"b".
+X = "b",
+Y = "o" ;
 </pre>
 
 ### How to convert 4-letter words to list of letters in Prolog
