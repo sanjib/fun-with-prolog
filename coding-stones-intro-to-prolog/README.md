@@ -17,4 +17,4 @@ predicate :- predicates...
 - predicates & constants start with lowercase
 - variables start with uppercase
 - once a var is bound to a value in a rule, all occurrence of the var will have that value
-
+- fence or cut operator: "!"
